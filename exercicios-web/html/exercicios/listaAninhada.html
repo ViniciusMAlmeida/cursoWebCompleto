@@ -1,0 +1,54 @@
+<h1>Projeto</h1>
+<ul class="tree">
+    <li>
+        <label wm-folder class="pointer">Backend</label>
+        <ul>
+            <li>
+                <label wm-folder class="pointer">app</label>
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <label wm-folder class="pointer">config</label>
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <label wm-folder class="pointer">frontend</label>
+        <ul>
+            <li>
+                <label wm-folder class="pointer">public</label>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<style>
+    .d-none{
+        display: none;
+    }
+    .pointer{
+        cursor: pointer;
+    }
+</style>
+<script>
+    document.querySelectorAll('[wm-folder]').forEach(link => {
+        link.onclick = function(){
+            this.nextElementSibling.classList.toggle('d-none')
+        }
+    })
+</script>
